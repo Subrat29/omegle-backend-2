@@ -308,6 +308,11 @@ const createDefaultAdmin = async () => {
 
 createDefaultAdmin()
 
+// ✅ Test route added here
+app.get("/test", (req, res) => {
+  res.json({ message: "Server is Running...✅" })
+})
+
 // Start server
 const PORT = process.env.PORT || 5000
 server.listen(PORT, () => {
