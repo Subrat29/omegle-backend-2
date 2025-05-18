@@ -12,6 +12,11 @@ const Report = require("../models/Report")
 // Middleware
 const auth = require("../middleware/auth")
 
+// Test route to verify server is working
+router.get("/test", (req, res) => {
+  res.json({ message: "Server is Running...✅" })
+})
+
 // Login route
 router.post("/login", async (req, res) => {
   try {
